@@ -1,0 +1,53 @@
+<html>
+<head>
+</head>
+<body>
+<STYLE type='text/css'>
+	ul {margin:0;padding:0;}
+	li {list-style:none;}
+	TD {white-space: nowrap;background-color:FFFF00 }
+	TD:hover {background-color:FFDD00;cursor:default}
+</STYLE>
+<script>
+	function elem_focus()
+	{
+		document.getElementById("elem_list").style.visibility='visible';
+
+		document.body.onmouseup=function(){
+			if (document.activeElement.id=="elem_filter") return;
+			document.getElementById("elem_list").style.visibility='hidden';
+		}
+		document.body.onkeyup=function(){
+			if (document.activeElement.id=="elem_filter") return;
+			document.getElementById("elem_list").style.visibility='hidden';
+		}
+	}
+	function elem_edit()
+	{
+	}
+
+</script>
+
+ <span style="display:inline-block;background-color:AACCFF;width:100px">kodia</span><p>
+  
+<input name="IDElem" type='hidden' value="0" />
+  <input id="elem_filter" style="position:relative;width:100px;background-color:FFFF00;" value="CABizertin" readonly=true onfocus='elem_focus();'  />
+  <TABLE id="elem_list" style="position:absolute;visibility:hidden;"  >
+	<TR ><TD>option 1 option option</TD></TR>
+	<TR ><TD>option 1</TD></TR>
+	<TR ><TD>option 1</TD></TR>
+</TABLE>
+
+
+	<TABLE id="elem_list"  >
+		<TR ><TD ><INPUT/></TD><TD><INPUT/></TD><TD><INPUT/></TD><TD><INPUT/></TD></TR>
+		<TR ><TD><INPUT/></TD><TD><INPUT/></TD><TD><INPUT/></TD><TD><INPUT/></TD></TR>
+		<TR ><TD><INPUT/></TD><TD><INPUT/></TD><TD><INPUT/></TD><TD><INPUT/></TD></TR>
+	</TABLE>
+
+
+
+<h1><p>test test test test</p></h1>
+ 
+</body>
+</html>
